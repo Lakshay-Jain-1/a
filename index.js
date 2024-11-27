@@ -10,6 +10,6 @@ const server = http2.createServer((req, res) => {
 });
 
 const port = process.env.PORT||4000
-server.listen(port, () => {
-  console.log("HTTP/2 server running on port 3000");
-});
+server.listen(port, '0.0.0.0', () => {
+    console.log(`HTTP/2 server running on port ${port}`);
+  });
